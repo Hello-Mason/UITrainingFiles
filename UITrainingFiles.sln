@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDesignINXamlDemo", "MaterialDesignINXamlDemo\MaterialDesignINXamlDemo.csproj", "{075239BE-38D1-46FA-A53F-F1F04D03850A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{075239BE-38D1-46FA-A53F-F1F04D03850A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{075239BE-38D1-46FA-A53F-F1F04D03850A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{075239BE-38D1-46FA-A53F-F1F04D03850A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{075239BE-38D1-46FA-A53F-F1F04D03850A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96C87BFF-64F3-4C75-8284-83DCFBF1895A}
+	EndGlobalSection
+EndGlobal
