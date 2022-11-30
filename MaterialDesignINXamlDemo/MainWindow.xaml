@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:MaterialDesignINXamlDemo"
         Background="{DynamicResource MaterialDesignLightBackground}"
         TextElement.Foreground="{DynamicResource MaterialDesignDarkForeground}"
@@ -16,9 +17,10 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <Button
-    Style="{StaticResource MaterialDesignRaisedAccentButton}"
-    Width="100"
-    Content="Mason"/>
+        <materialDesign:Badged
+            Badge="{materialDesign:PackIcon Heart}"
+            BadgeColorZoneMode="SecondaryMid" Margin="373,177,0,0">
+            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Content="LOVE" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+        </materialDesign:Badged>
     </Grid>
 </Window>
