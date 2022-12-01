@@ -79,7 +79,7 @@
             <ListBoxItem>CC</ListBoxItem>
             <ListBoxItem>AA</ListBoxItem>
             <ListBoxItem>BB</ListBoxItem>
-            <ListBoxItem>CC</ListBoxItem>
+            <ListBoxItem>True</ListBoxItem>
             <ListBoxItem>AA</ListBoxItem>
             <ListBoxItem>BB</ListBoxItem>
             <ListBoxItem>CC</ListBoxItem>
@@ -105,7 +105,7 @@
                     </Setter>
 
                     <Style.Triggers>
-                        <Trigger Property="IsSelected" Value="True">
+                        <Trigger Property="Content"  Value="True">
                             <Setter Property="Background" Value="Black"/>
                             <Setter Property="Foreground" Value="Blue"/>
                         </Trigger>
