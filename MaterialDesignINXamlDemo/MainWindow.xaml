@@ -8,7 +8,7 @@
         Background="{DynamicResource MaterialDesignLightBackground}"
         TextElement.Foreground="{DynamicResource MaterialDesignDarkForeground}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Autocoder" Height="450" Width="800">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -17,10 +17,109 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition  Height="50"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+            <materialDesign:Badged
+                Margin="0, 0, 10, 0"
+                Badge="1">
+                <Button
+                    Content="MAIL"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+            </materialDesign:Badged>
+            <materialDesign:Badged
+                Margin="0, 0, 10, 0"
+                Badge="2">
+                <Button
+                    Content="MAIL"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+            </materialDesign:Badged>
+            <materialDesign:Badged
+                Margin="0, 0, 10, 0"
+                Badge="3">
+                <Button
+                    Content="MAIL"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+            </materialDesign:Badged>
+            <materialDesign:Badged
+                Margin="0, 0, 10, 0"
+                Badge="4">
+                <Button
+                    Content="MAIL"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+            </materialDesign:Badged>
+        </StackPanel>
+        
+        
         <materialDesign:Badged
-            Badge="{materialDesign:PackIcon Heart}"
-            BadgeColorZoneMode="SecondaryMid" Margin="373,177,0,0">
-            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Content="LOVE" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+            Grid.Row="2"
+            Badge="{materialDesign:PackIcon Kind=Fingerprint, Size=13 }"
+            VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button 
+                Content="确   定" 
+                IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Button_Click" Width="776" />
         </materialDesign:Badged>
+        
+        <ListBox Grid.Row="1">
+            <ListBoxItem>AA</ListBoxItem>
+            <ListBoxItem>BB</ListBoxItem>
+            <ListBoxItem>CC</ListBoxItem>
+            <ListBoxItem>AA</ListBoxItem>
+            <ListBoxItem>BB</ListBoxItem>
+            <ListBoxItem>CC</ListBoxItem>
+            <ListBoxItem>AA</ListBoxItem>
+            <ListBoxItem>BB</ListBoxItem>
+            <ListBoxItem>CC</ListBoxItem>
+            <ListBoxItem>AA</ListBoxItem>
+            <ListBoxItem>BB</ListBoxItem>
+            <ListBoxItem>CC</ListBoxItem>
+            <ListBoxItem>AA</ListBoxItem>
+            <ListBoxItem>BB</ListBoxItem>
+            <ListBoxItem>CC</ListBoxItem>
+            <ListBoxItem>AA</ListBoxItem>
+            <ListBoxItem>BB</ListBoxItem>
+            <ListBoxItem>CC</ListBoxItem>
+            <ListBoxItem>AA</ListBoxItem>
+            <ListBoxItem>BB</ListBoxItem>
+            <ListBoxItem>CC</ListBoxItem>
+
+            <ListBox.ItemContainerStyle>
+                
+                <Style TargetType="ListBoxItem">
+                    
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter 
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        TextBlock.Foreground="{TemplateBinding Foreground}"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="Black"/>
+                            <Setter Property="Foreground" Value="Blue"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="LightGreen"/>
+                            <Setter Property="Foreground" Value="Red"/>
+                        </Trigger>
+                    </Style.Triggers>
+                    
+                </Style>
+                
+            </ListBox.ItemContainerStyle>
+            
+        </ListBox>
+        
     </Grid>
 </Window>
